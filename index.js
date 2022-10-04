@@ -1,61 +1,53 @@
-/* function agregarAlCarrito() {
-    carrito.push(paquete);
-    alert("Agregado al carrito");
-}
-
-let cardTitle = document.getElementById("card_title");
-let button = document.getElementById("agregarAlCarrito"); 
-button.addEventListener("click", agregarAlCarrito);
-let carrito = [];
-localStorage.setItem("prodcuto", carrito);
-let body = document.getElementById("body");
-let buttonChangeTheme = document.getElementById("buttonchange-theme");
-let darkTheme = document.getElementsByClassName(".changeThemeToDark");
- buttonChangeTheme.addEventListener("click", changeThemeDark); 
-buttonChangeTheme.onclick = function changeThemeDark() {
-    buttonChangeTheme.innerHTML("Dark Theme"); 
-    body.className = ".changeThemeToDark";
-    console.log("monooo");
-
-} 
-*/
 const contenedorProductos = document.getElementById("contenedorProductos");
 
 const contenedorCarrito = document.getElementById("contenedorCarrito");
 
-
+const vaciarCarrito = document.getElementById('vaciarCarrito');
 
 let carrito = [];
-
-productos.forEach((producto) => {
-    const div = document.createElement('div');
-    div.classList.add('producto')
-    div.innerHTML = `
-    <img src="${producto.imagen}" alt"">
-    <h3>${producto.nombre}</h3>
-    <p>${producto.descripcion} </p>
-    <p>Talle: ${producto.talle}</p>
-    <p class="precioProducto">Precio: $${producto.precio}</p>
-    <button id="agregar${producto.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
-    `
-    contenedorProductos.appendChild(div);
-
-    const botonAgregarAlCarrito = document.getElementById('agregar${producto.id}')
-   
-    /* botonAgregarAlCarrito.addEventListener("click", () => {
-        agregarAlCarrito(producto.id) 
-    }) */
-})
-
-
 
 const agregarAlCarrito = (prodId) => {
     const item = productos.find((prod) => prod.id === prodId);
     carrito.push(item);
     actualizarCarrito();
+    
+}
+
+productos.forEach((producto) => {
+    const div = document.createElement('div');
+    div.classList.add('producto')
+    div.innerHTML = `
+    <img src="${producto.imagen}" alt"" class="imgProducts">
+    <div class="pAndElseContenedor">
+    <h3>${producto.nombre}</h3>
+    <p>${producto.descripcion} </p>
+    <p>Talle: ${producto.talle}</p>
+    <p class="precioProducto">Precio: $${producto.precio}</p>
+    <button id="agregar${producto.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
+    </div>
+    `
+    contenedorProductos.appendChild(div);
+
+    let btn_agregarAlCarrito = document.getElementById(`agregar${producto.id}`)
+   
+    btn_agregarAlCarrito.addEventListener('click', () => {
+        agregarAlCarrito(producto.id);
+    })
+})
+
+
+
+const eliminarDelCarrito = (prodId) => {
+    const item = carrito.find((prod) => prod.id === prodId);
+    const indice = carrito.indexOf(item);
+    carrito.splice(indice, 1);
+    actualizarCarrito();
 }
 
 const actualizarCarrito = () => {
+    contenedorCarrito.innerHTML = ""
+
+
     carrito.forEach((prod) => {
         const div2 = document.createElement('div');
         div2.className = ('productoEnCarrito');
@@ -69,3 +61,7 @@ const actualizarCarrito = () => {
         contenedorCarrito.appendChild(div2);
     })
 }
+
+
+
+
