@@ -1345,4 +1345,115 @@ body.dark #darkmode {
   background-position: right center;
 }
 
+.modalContenedor {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modalCarrito {
+  position: relative;
+  background-color: white;
+  min-width: 500px;
+  padding: 20px;
+  margin-top: -100%;
+  transition: all 0.5s;
+}
+
+.modal-active .modalCarrito {
+  margin-top: 0;
+}
+
+.modalCarrito h3 {
+  color: royalblue;
+  padding-bottom: 5px;
+}
+
+.modalCarrito #cerrarCarrito {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
+  color: royalblue;
+  border: none;
+  background-color: white;
+}
+
+.modalCarrito #cerrarCarrito:hover {
+  cursor: pointer;
+}
+
+.modalCarrito #cerrarCarrito:focus {
+  outline: none;
+}
+
+.modalCarrito .precioProducto {
+  padding-top: 10px;
+}
+
+.productoEnCarrito {
+  border-left: 5px solid lightblue;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  margin: 5px 0;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.productoEnCarrito:hover {
+  border-left: 5px solid royalblue;
+}
+
+.botonEliminar {
+  background-color: white;
+  color: red;
+  border: none;
+  font-size: 20px;
+}
+
+.botonEliminar:hover {
+  cursor: pointer;
+}
+
+.botonEliminar:focus {
+  outline: none;
+}
+
+.productoEnCarrito {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.productoEnCarrito .productoContenedor img {
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+  flex-direction: row;
+}
+.productoEnCarrito .productoContenedor p {
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.precioFinal {
+  position: fixed;
+  bottom: 5;
+  right: 5;
+}
+
 /*# sourceMappingURL=style.css.map */

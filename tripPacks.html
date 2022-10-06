@@ -41,7 +41,7 @@
               </li>
             </ul>
             <div>
-              <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+              <button id="offCanvaContenedor" class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-cart-shopping"></i><span id="contadorCarrito">0</span></button>
             </div>
           </div>
         </div>
@@ -51,19 +51,26 @@
 
       </main>
 
-      <div class="modalContenedor">
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <h5 id="offcanvasRightLabel">Carrito</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div id="contenedorCarrito">
+          </div>
+          <p class="precioProductos">Total: $ <span id="precioFinal">0</span></p>
+        </div>
+      </div>
+      
+     <!-- <div class="modalContenedor">
       <div class="modalCarrito">
         <h3>Carrito</h3>
         <button id="cerrarCarrito"><i class="fas fa-times-circle"></i></button>
         <div id="contenedorCarrito">
-          <!-- <div class="productoEnCarrito">
-            <p>Sneaker 1</p>
-            <p>Precio: $12000</p>
-            <button class="botonEliminar"><i class="fas fa-trash-alt"></i></button>
-          </div>  -->
         </div>
       </div>
-      </div>
+      </div> -->
 
         <footer class="site-footer footer">
             <div class="container">
