@@ -65,16 +65,41 @@ productos.forEach((producto) => {
    
     btn_agregarAlCarrito.addEventListener('click', () => {
         agregarAlCarrito(producto.id);
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Se ha agregado al carrito',
+            showConfirmButton: false,
+            timer: 1000
+          })
     })
 })
 
 
 
 const eliminarDelCarrito = (prodId) => {
-    const item = carrito.find((prod) => prod.id === prodId);
-    const indice = carrito.indexOf(item);
-    carrito.splice(indice, 1);
-    actualizarCarrito();
+    Swal.fire({
+        title: '¿Quieres eliminar el producto del carrito?',
+        text: "",
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#d33',
+        cancelButtonColor: '#3085d6',
+        confirmButtonText: 'Si, eliminar'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire(
+            'Eliminado!',
+            'El producto ha sido eliminado con exito.',
+            'success'
+          )
+            const item = carrito.find((prod) => prod.id === prodId);
+            const indice = carrito.indexOf(item);
+            carrito.splice(indice, 1);
+            actualizarCarrito();
+        }
+      })
+    
 }
 
 const actualizarCarrito = () => {

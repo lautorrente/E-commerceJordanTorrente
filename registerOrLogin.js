@@ -1,16 +1,22 @@
+/*let usuarios = [];
 
-/* 
-let users = [
-    {email: inputMail, contraseña: w}
-];
+let inputMail = document.getElementById('inputMail');
+localStorage.setItem('inputMail', inputMail.value)
+let inputPassValue = document.getElementById('inputPassword').value;
 
-const inputMail = document.getElementById('inputMail');
-const inputPassword = document.getElementById('inputPassword');
-const btnRegister = document.getElementById("buttonRegister");
+const btnRegister = document.getElementById('buttonRegister');
 
+class Usuarios {
+    constructor(email, password) {
+        this.email = email;
+        this.password = password;
+    }
+};
 
-btnRegister.addEventListener('click', () => {
-    users.email = inputMail.innerText;
-    users.contraseña = inputPassword.innerText;
-    users.push()
-}) */
+function registrarUsuario() {
+    usuarios.push(new Usuarios(inputMailValue, inputPassValue));
+    localStorage.setItem('usuarios', JSON.stringify(usuarios));
+}
+btnRegister.addEventListener('click', registrarUsuario);
+
+ */
