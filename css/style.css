@@ -1,5 +1,4 @@
 /* @import "../node_modules/bootstrap/scss/bootstrap"; */
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 .logo-1 img {
   height: 35px;
   width: 80px;
@@ -988,141 +987,6 @@ a:hover {
   border-radius: 20px;
 }
 
-/* Font 
-@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
-
-/* Design 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-* {
-  padding: 0;
-  margin: 0;
-}
-
-body {
-  color: #272727;
-  font-family: 'Quicksand', serif;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: 0;
-  padding: 1rem;
-}
-
-.main{
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-h1 {
-    font-size: 24px;
-    font-weight: 400;
-    text-align: center;
-}
-
-img {
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
-}
-
-.btn {
-  color: #ffffff;
-  padding: 0.8rem;
-  font-size: 14px;
-  text-transform: uppercase;
-  border-radius: 4px;
-  font-weight: 400;
-  display: block;
-  width: 100%;
-  cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: transparent;
-}
-
-.btn:hover {
-  background-color: rgba(255, 255, 255, 0.12);
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.cards_item {
-  display: flex;
-  padding: 1rem;
-}
-
-@media (min-width: 40rem) {
-  .cards_item {
-    width: 50%;
-  }
-}
-
-@media (min-width: 56rem) {
-  .cards_item {
-    width: 33.3333%;
-  }
-}
-
-.card {
-  background-color: white;
-  border-radius: 0.25rem;
-  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.card_content {
-  padding: 1rem;
-  background: linear-gradient(to bottom, #F1AB86 34%, #9CAFB7 100%) ;
-}
-
-.card_title {
-  color: #ffffff;
-  font-size: 1.1rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: capitalize;
-  margin: 0px;
-  text-align: center;
-}
-
-.card_text {
-  color: #ffffff;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  margin-bottom: 1.25rem;    
-  font-weight: 400;
-}
-.made_by{
-  font-weight: 400;
-  font-size: 13px;
-  margin-top: 35px;
-  text-align: center;
-}
-.card_image {
-  img {
-    filter: blur(3px);
-    height: 220px;
-    width: 440px;
-    &:hover {
-      filter: blur(0);
-    }
-
-  }
-}
-.card-border {
-  height: 1px;
-  border: 2px, linear-gradient(to left, #40668a 40%, rgb(48, 34, 255)60%) ;
-} */
 .producto {
   max-width: 20%;
   padding: 15px;
@@ -1148,6 +1012,28 @@ img {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   text-align: center;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  height: 30px;
+  width: 100%;
+}
+
+.search-container input {
+  height: 40px;
+  width: 500px;
+  color: #1e1e1e;
+  border-radius: 20px;
+}
+
+.search-container input:hover {
+  box-shadow: 2px 2px 1px #016dcb;
+  transition: all 0.5s;
 }
 
 .site-footer {
@@ -1308,6 +1194,10 @@ img {
     font-weight: 600;
   }
 }
+.container-footer {
+  padding: 20px;
+}
+
 .mainAboutUs {
   width: 100%;
   height: 200px;
@@ -1451,79 +1341,135 @@ body.dark #darkmode {
   font-weight: 400;
 }
 
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-
-.bodyRegister {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+body {
   background: #4070f4;
 }
-
 .container {
-  position: relative;
-  max-width: 900px;
+  max-width: 370px;
   width: 100%;
-  border-radius: 6px;
-  padding: 30px;
-  margin: 0 15px;
+  padding: 25px;
+  border-radius: 8px;
   background-color: #fff;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
-.container h1 {
-  font-size: 20px;
+.container header {
+  font-size: 22px;
   font-weight: 600;
   color: #333;
 }
-.container h1::before {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  height: 3px;
-  width: 27px;
-  border-radius: 8px;
-  background-color: #4070f4;
-}
 .container form {
+  margin-top: 30px;
+}
+form .field {
+  margin-bottom: 20px;
+}
+form .input-field {
   position: relative;
-  margin-top: 16px;
-  min-height: 490px;
-  background-color: #fff;
+  height: 55px;
+  width: 100%;
 }
-.container form .details {
-  margin-top: 10px;
+.input-field input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  padding: 0 15px;
+  border: 1px solid #d1d1d1;
 }
-.container form .title {
-  font-size: 16px;
-  font-weight: 500;
-  margin: 6px 0;
-  color: #333;
+.invalid input {
+  border-color: #d93025;
 }
-.container form .fields {
+.input-field .show-hide {
+  position: absolute;
+  right: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #919191;
+  cursor: pointer;
+  padding: 3px;
+}
+.field .error {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  margin-top: 6px;
+  color: #d93025;
+  font-size: 13px;
+  display: none;
 }
-.container form .fields .input-field {
+.invalid .error {
   display: flex;
-  /* width: calc(100% / 3 - 15px); */
+}
+.error .error-icon {
+  margin-right: 6px;
+  font-size: 15px;
+}
+.create-password .error {
+  align-items: flex-start;
+}
+.create-password .error-icon {
+  margin-top: 4px;
+}
+.button {
+  margin: 25px 0 6px;
+}
+.button input {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #4070f4;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button input:hover {
+  background-color: #0e4bf1;
+}
+ */
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px;
+  height: 300px;
+}
+.cards-container h3 {
+  text-align: center;
+  font-size: 20px;
+  color: #2424dc;
+  font-weight: 700;
+}
+
+.card {
+  display: flex;
   flex-direction: column;
-  margin: 4px 0;
+  margin: 20px;
+  padding: 30px;
+  background-color: rgb(227, 191, 145);
 }
-.container form .fields .input-field input {
-  height: 42px;
-  margin: 8px 0;
+.card:hover {
+  box-shadow: 0px 4px 0px 4px rgba(0, 0, 0, 0.5);
 }
-.container form .fields .input-field label {
-  font-size: 12px;
-  font-weight: 500;
-  color: #2e2e2e;
+.card .cardName {
+  color: #464650;
+  font-size: 30px;
+}
+.card .cardContent {
+  color: black;
+  font-size: 15px;
+  padding: 7px;
+}
+.card .cardValoration {
+  color: black;
+  font-size: 17px;
 }
 
 /*# sourceMappingURL=style.css.map */

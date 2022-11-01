@@ -1,0 +1,6 @@
+[
+    {"id": 1 , "nombre": "Mirko Gomez", "mensaje": "La página Mainers Sneakers cuenta con los modelos de Sneakers mas ansiados por los coleccionistas, y es un perfecto ejemplo de una web de calidad", "puntuacion" : 10},
+    {"id": 2 , "nombre": "Ana Lindt", "mensaje": "MS me ayudo a encontrar el par de Jordan que necesitaba, la recomiendo mucho por los bajos precios con los que cuenta.", "puntuacion" : 8.5},
+    {"id": 3 , "nombre": "Josefina Elias", "mensaje": "Mainers Sneakers me soluciono la vida, ya no tengo que estar 10 horas buscando el par de coleccion que quiero, porque ellos lo tienen todo!", "puntuacion" : 9},
+    {"id": 4 , "nombre": "Matias Morla", "mensaje": "La página Mainers Sneakers tiene un soporte y centro de Atencion que la hacen destacar, ademas de la calidad de sus productos y el empeño que tienen.", "puntuacion" : 9.5}
+]

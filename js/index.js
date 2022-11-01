@@ -8,9 +8,40 @@ const contadorCarrito = document.getElementById('contadorCarrito');
 
 const precioFinal = document.getElementById("precioFinal");
 // const offCanvaCarrito = document.getElementById("offCanvaContenedor");
-
+/* const productos = fetch("../json/productos.json")
 // offCanvaCarrito.addEventListener('click',  desplegarCarrito)
-
+.then(response => response.json())
+.then(productos => {
+    productos.forEach((producto) => {
+        const div = document.createElement('div');
+        div.classList.add('producto')
+        div.innerHTML = `
+        <img src="${producto.imagen}" alt"" class="imgProducts">
+        <div class="pAndElseContenedor">
+        <h3>${producto.nombre}</h3>
+        <p>${producto.descripcion} </p>
+        <p>Talle: ${producto.talle}</p>
+        <p class="precioProducto">Precio: $${producto.precio}</p>
+        <button id="agregar${producto.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
+        </div>
+        `
+        contenedorProductos.appendChild(div);
+    
+        let btn_agregarAlCarrito = document.getElementById(`agregar${producto.id}`)
+       
+        btn_agregarAlCarrito.addEventListener('click', () => {
+            agregarAlCarrito(producto.id);
+            console.log("monito");
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Se ha agregado al carrito',
+                showConfirmButton: false,
+                timer: 1000
+              })
+        })
+    })
+}) */
 /* function desplegarCarrito() {
     let div = document.createElement('div');
     div.innerHTML = `
